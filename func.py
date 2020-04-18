@@ -22,8 +22,8 @@ def maxdiag(matrix):
 
 def sumsquarediag(matrix):
     sumnum = 0
-    for i in range(0, len(matrix)):
-        for j in range(i + 1, len(matrix)):
+    for i in range(1, len(matrix)):
+        for j in range(0, i):
             sumnum += matrix[i][j] * matrix[i][j]
 
     res = np.sqrt(sumnum)
@@ -130,7 +130,7 @@ def rotation(matrix, matrix1, number, eps):
 
     for i in range(0, number):
         vec = vectors(XT, number, i)
-        print("Вектор X",i+1," (", vec, ")")
+        print("Вектор X", i + 1, " (", vec, ")")
 
         F = []
         for j in range(0, number):
